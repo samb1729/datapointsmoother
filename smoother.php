@@ -1,5 +1,7 @@
 <?php
-include("stats.php");
+if (!class_exists("Stats")) {
+    include("stats.php");
+}
 
 function last_update($updates) {
     return $updates[count($updates) - 1]->time;
